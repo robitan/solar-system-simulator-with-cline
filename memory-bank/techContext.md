@@ -39,11 +39,17 @@ Git: >= 2.x
 
    ```
    solar-system-simulator/
-   ├── src/               # Source code
-   ├── public/           # Static assets
-   ├── docker/          # Docker configuration
-   ├── package.json     # Dependencies
-   └── README.md        # Documentation
+   ├── src/
+   │   └── index.js          # Express server setup
+   ├── public/
+   │   ├── index.html        # Main HTML file
+   │   └── js/
+   │       └── main.js       # Three.js implementation
+   ├── package.json          # Dependencies
+   ├── package-lock.json     # Dependency lock file
+   ├── .gitignore           # Git ignore rules
+   ├── .dockerignore        # Docker ignore rules
+   └── Dockerfile           # Docker configuration
    ```
 
 2. **Development Workflow**
@@ -113,12 +119,11 @@ Git: >= 2.x
 ```json
 {
   "dependencies": {
-    "three": "^0.x.x",
-    "express": "^4.x.x"
+    "express": "^4.18.2",
+    "three": "^0.161.0"
   },
   "devDependencies": {
-    "docker": "^20.x.x",
-    "nodemon": "^2.x.x"
+    "nodemon": "^3.0.3"
   }
 }
 ```
