@@ -1,0 +1,21 @@
+{
+  "name": "solar-system-simulator",
+  "version": "1.0.0",
+  "description": "An educational 3D solar system simulation for children to learn about space",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "three": "^0.161.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.x"
+  }
+}

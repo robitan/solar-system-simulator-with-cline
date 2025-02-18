@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Simulator</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            display: block;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 16px;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 300px;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #planetInfo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 14px;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 250px;
+            display: none;
+        }
+        .slider-container {
+            margin: 10px 0;
+            color: white;
+        }
+        .slider-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .slider-container input {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h2>Solar System Simulator</h2>
+        <p>An interactive educational tool to explore our solar system.</p>
+        <p>Use mouse to rotate view:</p>
+        <ul>
+            <li>Left click + drag to orbit</li>
+            <li>Right click + drag to pan</li>
+            <li>Scroll to zoom</li>
+        </ul>
+    </div>
+
+    <div id="planetInfo">
+        <h3 id="planetName">Planet Name</h3>
+        <p id="planetDescription">Click on a planet to learn more about it!</p>
+    </div>
+
+    <div id="controls">
+        <div class="slider-container">
+            <label for="timeScale">Simulation Speed</label>
+            <input type="range" id="timeScale" min="0" max="2" step="0.1" value="0.1">
+        </div>
+        <button id="resetCamera">Reset Camera</button>
+        <button id="toggleOrbits">Toggle Orbits</button>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
