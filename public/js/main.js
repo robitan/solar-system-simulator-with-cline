@@ -1,5 +1,5 @@
-import * as THREE from '/node_modules/three/build/three.module.js';
-import { OrbitControls } from '/node_modules/three/examples/jsm/controls/OrbitControls.js';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // Planet data with real relative sizes (scaled down) and orbital periods
 const PLANET_DATA = {
@@ -117,10 +117,12 @@ class SolarSystem {
 
     createSun() {
         const sunGeometry = new THREE.SphereGeometry(5, 32, 32);
-        const sunMaterial = new THREE.MeshBasicMaterial({
+        const sunMaterial = new THREE.MeshStandardMaterial({
             color: 0xffff00,
             emissive: 0xffff00,
-            emissiveIntensity: 1
+            emissiveIntensity: 1,
+            metalness: 0,
+            roughness: 1
         });
         this.sun = new THREE.Mesh(sunGeometry, sunMaterial);
         this.scene.add(this.sun);

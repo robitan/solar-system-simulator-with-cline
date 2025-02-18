@@ -11,8 +11,7 @@ const port = process.env.PORT || 3000;
 // Serve static files from public directory
 app.use(express.static(join(__dirname, '../public')));
 
-// Serve Three.js and its modules
-app.use('/js', express.static(join(__dirname, '../public/js')));
+// Serve the entire node_modules directory
 app.use('/node_modules', express.static(join(__dirname, '../node_modules')));
 
 app.listen(port, () => {
