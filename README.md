@@ -2,6 +2,8 @@
 
 An interactive 3D visualization of our solar system designed to help children learn about space in an engaging way.
 
+![sample image](https://github.com/user-attachments/assets/fb78498a-a1b4-488b-abb1-97e2ad09c9b9
+
 ## Overview
 
 This project uses Three.js to create an immersive 3D simulation of the solar system, allowing users to explore and learn about planets, their orbits, and other celestial bodies in our solar system.
